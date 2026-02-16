@@ -16,12 +16,15 @@ body {
   font-family: "DN Sans", sans-serif;
   color: var(--text);
   background: radial-gradient(circle at 15% 20%, #f7f7f7 0%, #ebebeb 55%, #e1e1e1 100%);
+  display: grid;
+  place-items: center;
+  padding: 20px;
 }
 
 .page {
   width: min(640px, 100%);
-  margin: 0 auto;
-  padding: 40px 20px 56px;
+  margin: 0;
+  padding: 20px;
 }
 
 .profile {
@@ -64,7 +67,7 @@ h1 {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
-  font-size: 1.55rem;
+  font-size: 110%;
   transition: transform 0.14s ease, box-shadow 0.14s ease;
 }
 
@@ -128,7 +131,7 @@ h1 {
 .status {
   margin: 20px 0 0;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 100%;
   color: #333;
 }
 
@@ -137,11 +140,7 @@ h1 {
 }
 
 @media (max-width: 640px) {
-  .page {
-    padding-top: 28px;
-  }
-
   .link-card {
-    font-size: 1.35rem;
+    font-size: 125%;
   }
 }
