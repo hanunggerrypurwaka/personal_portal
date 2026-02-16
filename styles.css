@@ -1,0 +1,147 @@
+:root {
+  --bg: #ebebeb;
+  --text: #0d0d0d;
+  --card-bg: #f6f6f6;
+  --stroke: #121212;
+  --shadow: 4px 4px 0 #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "DN Sans", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 15% 20%, #f7f7f7 0%, #ebebeb 55%, #e1e1e1 100%);
+}
+
+.page {
+  width: min(640px, 100%);
+  margin: 0 auto;
+  padding: 40px 20px 56px;
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 34px;
+}
+
+.avatar {
+  width: 92px;
+  height: 92px;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+  outline: 0;
+  background: transparent;
+  object-fit: contain;
+}
+
+h1 {
+  margin: 12px 0 0;
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.links {
+  display: grid;
+  gap: 16px;
+}
+
+.link-card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 72px;
+  border: 2px solid var(--stroke);
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  font-size: 1.55rem;
+  transition: transform 0.14s ease, box-shadow 0.14s ease;
+}
+
+.link-card:hover,
+.link-card:focus-visible {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.link-title {
+  width: 100%;
+  text-align: center;
+  padding: 20px 44px 20px 16px;
+}
+
+.link-kebab {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: grid;
+  gap: 3px;
+}
+
+.link-kebab span {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #666;
+}
+
+.social-links {
+  margin-top: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  transition: transform 0.14s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  transform: translateY(-2px);
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.status {
+  margin: 20px 0 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.status.error {
+  color: #8b0000;
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding-top: 28px;
+  }
+
+  .link-card {
+    font-size: 1.35rem;
+  }
+}
